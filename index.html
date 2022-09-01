@@ -1,0 +1,506 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Google Font  -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Russo+One&display=swap" rel="stylesheet">
+    <!-- font-family: 'Dancing Script', cursive;
+    font-family: 'Russo One', sans-serif; -->
+    <!-- -------------------------------------------------------------------------------------------- -->
+    <!-- Bootstrap Icon -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <!-- Customize CSS  -->
+    <link rel="stylesheet" href="CSS/style.css">
+    <title>RedStore | Ecommerce Website</title>
+</head>
+
+<body>
+    <div class="container-xxl bg-danger pb-md-3 position-fixed" style="z-index: 1000;">
+        <!-- navbar row -->
+        <div class="row row-cols-auto justify-content-between justify-content-sm-around align-items-center align-items-md-end position-relative">
+            <div class="col">
+                <span class="border border-white border-4 border-bottom-0 p-2 fs-6 pt-0 position-relative">
+                <span class="text-dark logo-font">RED</span><span class="text-white">STORE</span>
+                <span class="logo-small-text logo-cursive-font text-white">The one of the Best Store</span>
+                <span class="gradien-bottom-border logo-footer-color"></span>
+                </span>
+            </div>
+            <div class="col">
+                <span class="d-md-inline vertical-nav-links position-md-relative" style="z-index: 10;" id="res_links">
+            <a href="index.html" class="text-white text-decoration-none me-3 mt-3 mb-md-0">Home</a>
+            <a href="product.html" class="text-white text-decoration-none me-3">Products</a>
+            <a href="productDetail.html" class="text-white text-decoration-none me-3">About</a>
+            <a href="productDetail.html" class="text-white text-decoration-none me-3">Contact</a>
+            <a href="account.html" class="text-white text-decoration-none me-3 mb-3 mb-md-0">Account</a>
+        </span>
+                <span>
+            <a href="cart.html" class="text-white cart-icon"><i class="bi bi-cart3 display-6"></i></a>
+        </span>
+            </div>
+            <!-- Hem Burger icon -->
+            <div class="d-md-none">
+                <i onclick="showNav()" class="bi bi-list text-white" style="font-weight: 900; font-size: 40px;"></i>
+            </div>
+        </div>
+    </div>
+    <!-- starter container -->
+    <div class="container-xxl gradien-bg pt-3">
+        <!-- first section row -->
+        <div class="row align-items-md-center p-5" style="padding-bottom: 5rem!important;" onclick="hideNav()">
+            <div class="col-md-6 mt-1 text-center text-md-start">
+                <h1 class="fw-bolder">Give Your Workout <br> A New Style!</h1>
+                <p class=" text-secondary4">Success isn't always about greatness. it's about consistency. <br> Consistent hard work gains success. <br> Greatness will come.</p>
+                <button class="btn btn-danger rounded-pill fs-5 border-2 pt-0 pb-1 ps-4 pe-4">Explore Now <span class="r-arrow">&#8594;</span></button>
+                <!-- <button class="btn rounded-pill btn-danger fs-5 pt-0 pb-1 ps-4 pe-4" id="explore_btn">Explore Now <i class="bi bi-arrow-right" style="font-size: 30px;"></i></button> -->
+            </div>
+            <div class="col-auto m-auto col-md-6 mt-md-1 mt-5">
+                <img class="img-fluid" src="IMG/landing_page_img-min.png">
+            </div>
+        </div>
+    </div>
+    <!-- container for store and product -->
+    <div class="container-xxl mt-5">
+        <!-- our store -->
+        <div class="row justify-content-center align-items-center">
+            <div class="col-12 text-center m-3">
+                <span class=" fs-1 g-under position-relative">Our Stores</span>
+            </div>
+            <div class="row justify-content-center align-items-center overflow-hidden">
+                <div class="col-12 d-flex justify-content-center align-items-center">
+                    <div><i class="text-secondary bi bi-chevron-compact-left hover-sec" style="font-size: 50px;"></i></div>
+                    <div class="border overflow-hidden rounded-circle"><img class="img-cover store-product" src="https://i0.wp.com/shoegazing.com/wp-content/uploads/2016/03/DSC04476.jpg?fit=2598%2C1732&ssl=1\\"></div>
+                    <div class="border overflow-hidden rounded-circle m-4"><img class="img-cover store-product" src="https://cdn.wisden.com/wp-content/uploads/2020/03/cricket-bats-980x530.jpg"></div>
+                    <div class="border overflow-hidden rounded-circle"><img class="img-cover store-product" src="https://cdn.sportmob.com/resource/news/20210413_961382/cover.jpg?cache=1618398095"></div>
+                    <!-- <div class="col d-none d-md-block border rounded-circle overflow-hidden"><img class="img-fluid img-cover hover-sec" src="https://i0.wp.com/shoegazing.com/wp-content/uploads/2016/03/DSC04476.jpg?fit=2598%2C1732&ssl=1\\"></div>
+                    <div class="col border rounded-circle overflow-hidden"><img class="img-fluid img-cover hover-sec" src="https://cdn.wisden.com/wp-content/uploads/2020/03/cricket-bats-980x530.jpg"></div>
+                    <div class="col d-none d-md-block border rounded-circle overflow-hidden"><img class="img-fluid img-cover hover-sec" src="https://cdn.sportmob.com/resource/news/20210413_961382/cover.jpg?cache=1618398095"></div> 
+                -->
+                    <div><i class="text-secondary bi bi-chevron-compact-right hover-sec" style="font-size: 50px;"></i></div>
+                </div>
+            </div>
+        </div>
+        <!-- latest products -->
+        <div class="row row-cols-2 row-cols-sm-3 justify-content-center mt-5">
+            <div class="col-12 text-center m-3">
+                <span class=" fs-1 g-under position-relative">Latest Products</span>
+            </div>
+            <div class="col-5 col-sm-3 m-1 border rounded gradien-bg">
+                <div class="row">
+                    <div class="col-12">
+                        <img class=" img-contain img-fluid" src="https://cdn11.bigcommerce.com/s-pkla4xn3/images/stencil/1280x1280/products/25306/232038/Bjakin-Newest-Women-Sneakers-Running-Shoes-Girls-Female-Sports-Shoes-Comfortable-Height-Increasing-7-CM-Chunky__90064.1549286378.jpg?c=2?imbypass=on">
+                    </div>
+                    <div class="col-12 mt-2">
+                        <h6 class="var-font">Women Sneakers Running Shoes</h6>
+                        <span><i class="bi bi-star-fill text-danger me-1"></i><i class="bi bi-star-fill text-danger me-1"></i><i class="bi bi-star-fill text-danger me-1"></i><i class="bi bi-star-half text-danger me-1"></i><i class="bi bi-star text-danger"></i></span>
+                        <p>$400.00</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-5 col-sm-3 m-1  border rounded gradien-bg">
+                <div class="row">
+                    <div class="col-12">
+                        <img class=" img-contain img-fluid" src="https://bacesportswear.com/wp-content/uploads/2016/10/66.jpg">
+                    </div>
+                    <div class="col-12 mt-2">
+                        <h6 class="var-font">Girls A-line Tennis Dress</h6>
+                        <span><i class="bi bi-star-fill text-danger me-1"></i><i class="bi bi-star-fill text-danger me-1"></i><i class="bi bi-star-fill text-danger me-1"></i><i class="bi bi-star-half text-danger me-1"></i><i class="bi bi-star text-danger"></i></span>
+                        <p>$400.00</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-5 col-sm-3 m-1  border rounded gradien-bg">
+                <div class="row">
+                    <div class="col-12">
+                        <img class=" img-contain img-fluid" src="https://www.ubuy.com.tr/productimg/?image=aHR0cHM6Ly9tLm1lZGlhLWFtYXpvbi5jb20vaW1hZ2VzL0kvODFscWs5UnpQcEwuX0FDX1NMMTUwMF8uanBn.jpg">
+                    </div>
+                    <div class="col-12 mt-2">
+                        <h6 class="var-font">Pro Impact Cricket Bat</h6>
+                        <span><i class="bi bi-star-fill text-danger me-1"></i><i class="bi bi-star-fill text-danger me-1"></i><i class="bi bi-star-fill text-danger me-1"></i><i class="bi bi-star-half text-danger me-1"></i><i class="bi bi-star text-danger"></i></span>
+                        <p>$400.00</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-5 col-sm-3 m-1  border rounded gradien-bg">
+                <div class="row">
+                    <div class="col-12">
+                        <img class=" img-contain img-fluid" src="https://www.ubuy.com.tr/productimg/?image=aHR0cHM6Ly9tLm1lZGlhLWFtYXpvbi5jb20vaW1hZ2VzL0kvODFscWs5UnpQcEwuX0FDX1NMMTUwMF8uanBn.jpg">
+                    </div>
+                    <div class="col-12 mt-2">
+                        <h6 class="var-font">Pro Impact Cricket Bat</h6>
+                        <span><i class="bi bi-star-fill text-danger me-1"></i><i class="bi bi-star-fill text-danger me-1"></i><i class="bi bi-star-fill text-danger me-1"></i><i class="bi bi-star-half text-danger me-1"></i><i class="bi bi-star text-danger"></i></span>
+                        <p>$400.00</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-5 col-sm-3 m-1  border rounded gradien-bg">
+                <div class="row">
+                    <div class="col-12">
+                        <img class=" img-contain img-fluid" src="https://www.ubuy.com.tr/productimg/?image=aHR0cHM6Ly9tLm1lZGlhLWFtYXpvbi5jb20vaW1hZ2VzL0kvODFscWs5UnpQcEwuX0FDX1NMMTUwMF8uanBn.jpg">
+                    </div>
+                    <div class="col-12 mt-2">
+                        <h6 class="var-font">Pro Impact Cricket Bat</h6>
+                        <span><i class="bi bi-star-fill text-danger me-1"></i><i class="bi bi-star-fill text-danger me-1"></i><i class="bi bi-star-fill text-danger me-1"></i><i class="bi bi-star-half text-danger me-1"></i><i class="bi bi-star text-danger"></i></span>
+                        <p>$400.00</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-5 col-sm-3 m-1  border rounded gradien-bg">
+                <div class="row">
+                    <div class="col-12">
+                        <img class=" img-contain img-fluid" src="https://www.ubuy.com.tr/productimg/?image=aHR0cHM6Ly9tLm1lZGlhLWFtYXpvbi5jb20vaW1hZ2VzL0kvODFscWs5UnpQcEwuX0FDX1NMMTUwMF8uanBn.jpg">
+                    </div>
+                    <div class="col-12 mt-2">
+                        <h6 class="var-font">Pro Impact Cricket Bat</h6>
+                        <span><i class="bi bi-star-fill text-danger me-1"></i><i class="bi bi-star-fill text-danger me-1"></i><i class="bi bi-star-fill text-danger me-1"></i><i class="bi bi-star-half text-danger me-1"></i><i class="bi bi-star text-danger"></i></span>
+                        <p>$400.00</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <!-- featured products -->
+        <div class="row row-cols-2 row-cols-sm-3 justify-content-center mt-5 mb-5">
+            <div class="col-12 text-center m-3">
+                <span class=" fs-1 g-under position-relative">Featured Products</span>
+            </div>
+            <div class="col-5 col-sm-3 m-1  border rounded gradien-bg">
+                <div class="row">
+                    <div class="col-12">
+                        <img class=" img-contain img-fluid" src="https://5.imimg.com/data5/EJ/LP/CM/SELLER-13601335/football-jersey-500x500.JPG">
+                    </div>
+                    <div class="col-12 mt-2">
+                        <h6 class="var-font">Men Foootball Jersey</h6>
+                        <span><i class="bi bi-star-fill text-danger me-1"></i><i class="bi bi-star-fill text-danger me-1"></i><i class="bi bi-star-fill text-danger me-1"></i><i class="bi bi-star-half text-danger me-1"></i><i class="bi bi-star text-danger"></i></span>
+                        <p>$400.00</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-5 col-sm-3 m-1  border rounded gradien-bg">
+                <div class="row">
+                    <div class="col-12">
+                        <img class=" img-contain img-fluid" src="data:image/jpeg;base64,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">
+                    </div>
+                    <div class="col-12 mt-2">
+                        <h6 class="var-font">HART Sports Timer 898</h6>
+                        <span><i class="bi bi-star-fill text-danger me-1"></i><i class="bi bi-star-fill text-danger me-1"></i><i class="bi bi-star-fill text-danger me-1"></i><i class="bi bi-star-half text-danger me-1"></i><i class="bi bi-star text-danger"></i></span>
+                        <p>$400.00</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-5 col-sm-3 m-1  border rounded gradien-bg">
+                <div class="row">
+                    <div class="col-12">
+                        <img class=" img-contain img-fluid" src="https://i5.walmartimages.com/asr/3dc05d17-9839-4b86-ba9b-5b7844816188_1.59b962e8bf65591a3c6c87614c9dc6d4.jpeg">
+                    </div>
+                    <div class="col-12 mt-2">
+                        <h6 class="var-font">Black Sports Shoes for girls</h6>
+                        <span><i class="bi bi-star-fill text-danger me-1"></i><i class="bi bi-star-fill text-danger me-1"></i><i class="bi bi-star-fill text-danger me-1"></i><i class="bi bi-star-half text-danger me-1"></i><i class="bi bi-star text-danger"></i></span>
+                        <p>$400.00</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-5 col-sm-3 m-1  border rounded gradien-bg">
+                <div class="row">
+                    <div class="col-12">
+                        <img class=" img-contain img-fluid" src="https://cdn.webshopapp.com/shops/16221/files/316389637/800x1067x3/venum-venum-impact-boxing-gloves-black-gold-muay-t.jpg">
+                    </div>
+                    <div class="col-12 mt-2">
+                        <h6 class="var-font">Venum Venum Impact Boxing Gloves Black Gold Muay Thai</h6>
+                        <span><i class="bi bi-star-fill text-danger me-1"></i><i class="bi bi-star-fill text-danger me-1"></i><i class="bi bi-star-fill text-danger me-1"></i><i class="bi bi-star-half text-danger me-1"></i><i class="bi bi-star text-danger"></i></span>
+                        <p>$400.00</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-5 col-sm-3 m-1  border rounded gradien-bg">
+                <div class="row">
+                    <div class="col-12">
+                        <img class=" img-contain img-fluid" src="https://pisces.bbystatic.com/image2/BestBuy_US/images/products/6464/6464620_rd.jpg;maxHeight=640;maxWidth=550">
+                    </div>
+                    <div class="col-12 mt-2">
+                        <h6 class="var-font">MD Sport-Winnfield Table Tennis Table-Green</h6>
+                        <span><i class="bi bi-star-fill text-danger me-1"></i><i class="bi bi-star-fill text-danger me-1"></i><i class="bi bi-star-fill text-danger me-1"></i><i class="bi bi-star-half text-danger me-1"></i><i class="bi bi-star text-danger"></i></span>
+                        <p>$400.00</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-5 col-sm-3 m-1  border rounded gradien-bg">
+                <div class="row">
+                    <div class="col-12">
+                        <img class=" img-contain img-fluid" src="https://thumbs.dreamstime.com/b/chess-board-pieces-white-set-up-to-begin-game-isolated-background-35071635.jpg">
+                    </div>
+                    <div class="col-12 mt-2">
+                        <h6 class="var-font">Chess board and Pieces</h6>
+                        <span><i class="bi bi-star-fill text-danger me-1"></i><i class="bi bi-star-fill text-danger me-1"></i><i class="bi bi-star-fill text-danger me-1"></i><i class="bi bi-star-half text-danger me-1"></i><i class="bi bi-star text-danger"></i></span>
+                        <p>$400.00</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-5 col-sm-3 m-1  border rounded gradien-bg">
+                <div class="row">
+                    <div class="col-12">
+                        <img class=" img-contain img-fluid" src="https://vdxl.im/8718475707134_a_en_hd_1.jpg">
+                    </div>
+                    <div class="col-12 mt-2">
+                        <h6 class="var-font">Bestway Hydro-Force Inflatable Boat with Pump and Oars Blue</h6>
+                        <span><i class="bi bi-star-fill text-danger me-1"></i><i class="bi bi-star-fill text-danger me-1"></i><i class="bi bi-star-fill text-danger me-1"></i><i class="bi bi-star-half text-danger me-1"></i><i class="bi bi-star text-danger"></i></span>
+                        <p>$400.00</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-5 col-sm-3 m-1  border rounded gradien-bg">
+                <div class="row">
+                    <div class="col-12">
+                        <img class=" img-contain img-fluid" src="https://m.media-amazon.com/images/I/61hJN01qONL._SL1500_.jpg">
+                    </div>
+                    <div class="col-12 mt-2">
+                        <h6 class="var-font">ToyLand Inflatable Swimming Pool Bath Tube, Hot+warm Water tub, Multi colour(2 feet) with Air Filling Pump</h6>
+                        <span><i class="bi bi-star-fill text-danger me-1"></i><i class="bi bi-star-fill text-danger me-1"></i><i class="bi bi-star-fill text-danger me-1"></i><i class="bi bi-star-half text-danger me-1"></i><i class="bi bi-star text-danger"></i></span>
+                        <p>$400.00</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-5 col-sm-3 m-1  border rounded gradien-bg">
+                <div class="row">
+                    <div class="col-12">
+                        <img class=" img-contain img-fluid" src="https://i5.walmartimages.com/asr/3dc05d17-9839-4b86-ba9b-5b7844816188_1.59b962e8bf65591a3c6c87614c9dc6d4.jpeg">
+                    </div>
+                    <div class="col-12 mt-2">
+                        <h6 class="var-font">Red Stylish Electrical Baby Toy Car, Sara</h6>
+                        <span><i class="bi bi-star-fill text-danger me-1"></i><i class="bi bi-star-fill text-danger me-1"></i><i class="bi bi-star-fill text-danger me-1"></i><i class="bi bi-star-half text-danger me-1"></i><i class="bi bi-star text-danger"></i></span>
+                        <p>$400.00</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-5 col-sm-3 m-1  border rounded gradien-bg">
+                <div class="row">
+                    <div class="col-12">
+                        <img class=" img-contain img-fluid" src="https://my-live-01.slatic.net/p/cfd40ccc4dfe7207981ee9404d774dbc.jpg">
+                    </div>
+                    <div class="col-12 mt-2">
+                        <h6 class="var-font">Free Fire Baseball Cap Hat Sport Black Caps Hat for men Black Cap</h6>
+                        <span><i class="bi bi-star-fill text-danger me-1"></i><i class="bi bi-star-fill text-danger me-1"></i><i class="bi bi-star-fill text-danger me-1"></i><i class="bi bi-star-half text-danger me-1"></i><i class="bi bi-star text-danger"></i></span>
+                        <p>$400.00</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-5 col-sm-3 m-1  border rounded gradien-bg">
+                <div class="row">
+                    <div class="col-12">
+                        <img class=" img-contain img-fluid" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQypATu9x05mQeLkXL1ubzrwjsvtN_aITE01fpQ_qDYivzlwegG3PibMhwIqBq6kAz2iXg&usqp=CAU">
+                    </div>
+                    <div class="col-12 mt-2">
+                        <h6 class="var-font">Blue Cricket Batting Helmet, 400G</h6>
+                        <span><i class="bi bi-star-fill text-danger me-1"></i><i class="bi bi-star-fill text-danger me-1"></i><i class="bi bi-star-fill text-danger me-1"></i><i class="bi bi-star-half text-danger me-1"></i><i class="bi bi-star text-danger"></i></span>
+                        <p>$400.00</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-5 col-sm-3 m-1  border rounded gradien-bg">
+                <div class="row">
+                    <div class="col-12">
+                        <img class=" img-contain img-fluid" src="https://contents.mediadecathlon.com/p1744688/k$74318222cb61e90373583c42db630b8f/f100-hybrid-size-5-football-ball-orangeslashblue.jpg?&f=800x800">
+                    </div>
+                    <div class="col-12 mt-2">
+                        <h6 class="var-font">F100 Hybrid Size 5 Football Ball-Orabge/Blue - Decathlon</h6>
+                        <span><i class="bi bi-star-fill text-danger me-1"></i><i class="bi bi-star-fill text-danger me-1"></i><i class="bi bi-star-fill text-danger me-1"></i><i class="bi bi-star-half text-danger me-1"></i><i class="bi bi-star text-danger"></i></span>
+                        <p>$400.00</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 text-center mt-4">
+                <button class="btn btn-outline-danger border-2">See More</button>
+            </div>
+        </div>
+        <!-- exclusive product -->
+        <div class="row pt-5 pb-5 gradien-bg">
+            <div class="col-md-6 align-self-center d-flex justify-content-center" style="height: 400px;">
+                <img class="img-contain" src="IMG/headset-min.png">
+            </div>
+            <div class="col-md-6 align-self-center text-center text-md-start mt-3">
+                <p class="text-success h6">Exclusively Available on RedStore</p>
+                <h1 class="display-6">Sony Brand Headset</h1>
+                <small class="text-secondary">The Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem fugit quia nihil. Debitis perspiciatis hic magnam, corrupti distinctio at rem!</small>
+                <button class="btn rounded-pill btn-danger ps-4 pe-4 mt-3 ms-auto me-auto m-md-0 mt-md-4" id="explore_btn">Bye Now <i class="bi bi-arrow-right" style="font-size: 20px;"></i></button>
+            </div>
+        </div>
+        <!-- testimonial -->
+        <div class="row  justify-content-center" style="margin: 7rem 0;">
+            <!-- first person -->
+            <div class="col-9 col-sm-7 col-lg-3 shadow border border-2 gradien-bg">
+                <div class="row justify-content-center">
+                    <div class="col-12 text-center">
+                        <span><i class="text-warning fs-1 bi bi-quote"></i></span>
+                        <br>
+                        <small>Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi quidem rem aspernatur. Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero dicta totam eligendi.</small>
+                        <br>
+                        <span>
+                            <i class="bi bi-star-fill mr-1 text-warning"></i>
+                            <i class="bi bi-star-fill mr-1  text-warning"></i>
+                            <i class="bi bi-star-fill mr-1 text-warning"></i>
+                            <i class="bi bi-star-half mr-1 text-warning"></i>
+                            <i class="bi bi-star"></i>
+                        </span>
+                    </div>
+                    <div class="col-auto m-1 mt-4">
+                        <img class="img-cover overflow-hidden rounded-pill" style="width: 50px; height: 50px;" src="data:image/jpeg;base64,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">
+                    </div>
+                    <div class="col-12 text-center">
+                        <h4>
+                            Tesla Marin
+                        </h4>
+                    </div>
+                </div>
+            </div>
+            <!-- second person -->
+            <div class="col-9 col-sm-7 col-lg-3 mt-4 mb-4 m-lg-0 ms-lg-4 me-lg-4 shadow border border-2 gradien-bg">
+                <div class="row justify-content-center">
+                    <div class="col-12 text-center">
+                        <span><i class="text-warning fs-1 bi bi-quote"></i></span>
+                        <br>
+                        <small>Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi quidem rem aspernatur. Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero dicta totam eligendi.</small>
+                        <br>
+                        <span>
+                            <i class="bi bi-star-fill mr-1 text-warning"></i>
+                            <i class="bi bi-star-fill mr-1  text-warning"></i>
+                            <i class="bi bi-star-fill mr-1 text-warning"></i>
+                            <i class="bi bi-star-half mr-1 text-warning"></i>
+                            <i class="bi bi-star"></i>
+                        </span>
+                    </div>
+                    <div class="col-auto m-1 mt-4">
+                        <img class="img-cover overflow-hidden rounded-pill" style="width: 50px; height: 50px;" src="data:image/jpeg;base64,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">
+                    </div>
+                    <div class="col-12 text-center">
+                        <h4>
+                            Lina Fello
+                        </h4>
+                    </div>
+                </div>
+            </div>
+            <!-- third peson -->
+            <div class="col-9 col-sm-7 col-lg-3 shadow border border-2 gradien-bg">
+                <div class=" row justify-content-center ">
+                    <div class="col-12 text-center ">
+                        <span><i class="text-warning fs-1 bi bi-quote "></i></span>
+                        <br>
+                        <small>Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi quidem rem aspernatur. Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero dicta totam eligendi.</small>
+                        <br>
+                        <span>
+                            <i class="bi bi-star-fill mr-1 text-warning "></i>
+                            <i class="bi bi-star-fill mr-1 text-warning "></i>
+                            <i class="bi bi-star-fill mr-1 text-warning "></i>
+                            <i class="bi bi-star-half mr-1 text-warning "></i>
+                            <i class="bi bi-star "></i>
+                        </span>
+                    </div>
+                    <div class="col-auto m-1 mt-4 ">
+                        <img class="img-cover overflow-hidden rounded-pill " style="width: 50px; height: 50px; " src="https://www.westend61.de/images/0001455988pw/businessman-working-on-laptop-while-sitting-by-desk-in-office-RBF07923.jpg ">
+                    </div>
+                    <div class="col-12 text-center ">
+                        <h4>
+                            John Doei
+                        </h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- brand logo -->
+        <div class="row justify-content-center align-items-center ">
+            <div class="col-2 col-md-1 "><img class="grayscale " width="100% " src="IMG/goorejPNG-min.png "></div>
+            <div class="col-2 col-md-1 "><img class="grayscale " width="100% " src="IMG/PayPal-Logo-min.png "></div>
+            <div class="col-2 col-md-1 "><img class="grayscale " width="100% " src="IMG/Oppo-logo-min.png "></div>
+            <div class="col-2 col-md-1 "><img class="grayscale " width="100% " src="IMG/coco colaPNG-min.png "></div>
+            <div class="col-2 col-md-1 "><img class="grayscale " width="100% " src="IMG/Philips-logoPNG-min.png "></div>
+        </div>
+    </div>
+    <!-- footer section -->
+    <div class="container-xxl">
+        <div class="row bg-dark justify-content-center text-white align-items-start pb-5" style=" margin-top: 5rem;">
+            <div class="col-10 col-sm-8 col-md-7 col-lg-4 mt-5">
+                <div class="row justify-content-center justify-content-lg-start ps-3">
+                    <!-- first-heading  -->
+                    <div class="col-12 text-center text-lg-start">
+                        <h3 class="normal_font">Download Our App</h3>
+                        <p class="display-6 fs-6 mb-0 mb-lg-4">Download App for Android and IOS mobile <br class="d-none d-md-inline"> phone.</p>
+                    </div>
+                    <div class="w-100 d-none d-md-block"></div>
+                    <div class="col-auto">
+                        <span class="store-box ">
+                            <i class="bi fs-2 bi-play-fill"></i>
+                            <p class="h6 m-0">Play Store</p>
+                        </span>
+                    </div>
+                    <div class="col-auto">
+                        <span class="store-box">
+                            <i class="bi fs-4 bi-apple"></i>
+                            <p class="h6 m-0">App Store</p>
+                        </span>
+                    </div>
+                </div>
+            </div>
+            <div class="w-100 d-lg-none"></div>
+            <!-- brand logo -->
+            <div class="col-10 col-sm-6 col-md-5 col-lg-4 mt-5">
+                <div class="row m-0 justify-content-center">
+                    <div class="col-auto">
+                        <span class="border border-white border-4 border-bottom-0 p-2 fs-6 pt-0 position-relative">
+                            <span class="text-danger logo-font">RED</span><span class="text-white">STORE</span>
+                        <span class="logo-small-text logo-cursive-font">The one of the Best Store</span>
+                        <span class="gradien-bottom-border logo-footer-color"></span>
+                        </span>
+                    </div>
+                    <div class="w-100"></div>
+                    <div class="col-auto text-center mt-3">
+                        <p class="display-6 fs-6">Our Purpose is To Sustainably Make the Pleaser and Benefits of Sports <br> Accessible to the Many.</p>
+                    </div>
+                    <div class="w-100"></div>
+                    <div class="col-auto">
+                        <i class="bi bi-instagram fs-3 m-2"></i>
+                        <i class="bi bi-facebook fs-3 m-2"></i>
+                        <i class="bi bi-youtube fs-3 m-2"></i>
+                        <i class="bi bi-whatsapp fs-3 m-2"></i>
+                        <i class="bi bi-linkedin fs-3 m-2"></i>
+                    </div>
+                </div>
+            </div>
+            <!-- Force next column to break to new line at md breakpoint and up -->
+            <div class="w-100 d-lg-none"></div>
+            <!-- usefull links -->
+            <div class="col-12 col-lg-2 text-center mt-5">
+                <p class="h3">Useful Links</p>
+                <h6 class="display-6 fs-6">Coupons</h6>
+                <h6 class="display-6 fs-6">Blog Post</h6>
+                <h6 class="display-6 fs-6">Return Policy</h6>
+                <h6 class="display-6 fs-6">Join Affiliate</h6>
+            </div>
+            <div class="w-100 d-lg-none"></div>
+            <!-- follow us links -->
+            <div class="col-12 col-lg-2 text-center mt-5">
+                <p class="h3">Follow Us</p>
+                <h6 class="display-6 fs-6">Facebook</h6>
+                <h6 class="display-6 fs-6">Twitter</h6>
+                <h6 class="display-6 fs-6">Instagam</h6>
+                <h6 class="display-6 fs-6">Youtube</h6>
+            </div>
+            <div class="w-100"></div>
+            <div class="col-10 text-white text-center mt-5">
+                <hr class="mb-0" style="opacity: .3;">
+                <small>Copyright &copy;2022-All Right Reserve</small>
+            </div>
+        </div>
+    </div>
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js " integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM " crossorigin="anonymous "></script>
+    <!-- Customize JS -->
+    <script src="JS/script.js "></script>
+</body>
+
+</html>

@@ -1,0 +1,651 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Google Font  -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Russo+One&display=swap" rel="stylesheet">
+    <!-- font-family: 'Dancing Script', cursive;
+    font-family: 'Russo One', sans-serif; -->
+    <!-- -------------------------------------------------------------------------------------------- -->
+    <!-- Bootstrap Icon -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <!-- Customize CSS  -->
+    <link rel="stylesheet" href="CSS/style.css">
+    <!-- jQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <title>Product Detail - RedStore</title>
+</head>
+
+<body>
+    <!-- starter container -->
+    <div class="container-xxl bg-danger pb-md-3">
+        <!-- navbar row -->
+        <div class="row row-cols-auto justify-content-between justify-content-sm-around align-items-center align-items-md-end position-relative">
+            <div class="col">
+                <a href="index.html" style="text-decoration: none;">
+
+                    <span class="border border-white border-4 border-bottom-0 p-2 fs-6 pt-0 position-relative">
+                    <span class="text-dark logo-font">RED</span><span class="text-white">STORE</span>
+                    <span class="logo-small-text logo-cursive-font text-white">The one of the Best Store</span>
+                    <span class="gradien-bottom-border logo-footer-color"></span>
+                    </span>
+                </a>
+            </div>
+            <div class="col">
+                <span class="d-md-inline vertical-nav-links position-md-relative" style="z-index: 10;" id="res_links">
+                <a href="index.html" class="text-white text-decoration-none me-3 mt-3 mb-md-0">Home</a>
+                <a href="product.htm" class="text-white text-decoration-none me-3">Products</a>
+                <a href="productDetail.html" class="text-white text-decoration-none me-3">About</a>
+                <a href="productDetail.html" class="text-white text-decoration-none me-3">Contact</a>
+                <a href="account.html" class="text-white text-decoration-none me-3 mb-3 mb-md-0">Account</a>
+            </span>
+                <span>
+                <a href="cart.html" class="text-white cart-icon"><i class="bi bi-cart3 display-6"></i></a>
+            </span>
+            </div>
+            <!-- Hem Burger icon -->
+            <div class="d-md-none">
+                <i onclick="showNav()" class="bi bi-list text-white" style="font-weight: 900; font-size: 40px;"></i>
+            </div>
+        </div>
+    </div>
+    <!-- cart items details -->
+    <div class="container-xxl mt-5">
+        <div class="row justify-content-center m-0">
+            <div class="col-md-11 col-lg-10">
+                <table class="table table-hover align-middle">
+                    <thead>
+                        <tr class="table-danger text-secondary">
+                            <th scope="col">Product</th>
+                            <th scope="col">Price</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- first-row -->
+                        <tr class="tableRow">
+                            <th scope="row">
+                                <div class="row row-cols-2">
+                                    <!-- left-img -->
+                                    <div class="col-auto">
+                                        <img class="img-cover img-thumbnail cart-img" src="https://assets.myntassets.com/fl_progressive/h_960,q_80,w_720/v1/assets/images/6869845/2019/2/25/520e0d80-9089-46e5-8a21-ca8bff67ea841551071293987-Roadster-Women-Grey-Solid-Round-Neck-T-shirt-571551071292359-1.jpg">
+                                    </div>
+                                    <!-- right-text -->
+                                    <div class="col-auto col-md-8 d-flex align-items-center justify-content-start d-md-block">
+                                        <h6 class="d-none d-md-block">Roadster Women Brown Black Colourblocked 3/4 Sleeve Pure Cotton T-shirt Pure Cotton T-shirt</h6>
+                                        <select class="form-select form-select-sm d-none d-md-inline" aria-label=".form-select-sm example" style="width: auto; display: inline-block;">       
+                                            <option selected>Size</option>
+                                            <option value="1">XXL</option>
+                                            <option value="2">XL</option>
+                                            <option value="3">Large</option>
+                                            <option value="3">Medium</option>
+                                            <option value="3">Small</option>
+                                        </select>
+                                        <select class="form-select form-select-sm d-none d-md-inline" aria-label=".form-select-sm example" style="width: auto; display: inline-block;">
+                                            <option selected>Quantity</option>
+                                            <option value="1">1</option>
+                                            <option value="2">2</option>
+                                            <option value="3">3</option>
+                                            <option value="3">4</option>
+                                            <option value="3">5</option>
+                                            <option value="3">6</option>
+                                            <option value="3">7</option>
+                                            <option value="3">8</option>
+                                            <option value="3">9</option>
+                                            <option value="3">10</option>
+                                                </select>
+                                        <br>
+                                        <p class="text-danger d-none d-md-block">Remove</p>
+                                        <button type="button" class="detail_btn btn btn-secondary d-md-none m-2 ms-0 text-nowrap">Detail <i class="bi bi-caret-down"></i></button>
+                                        <button type="button" class="btn btn-danger d-md-none m-2">Remove</button>
+                                    </div>
+                                </div>
+                            </th>
+                            <td id="price" class="fw-bold text-success">
+                                $70.00
+                            </td>
+                        </tr>
+                        <tr class="text-light d-none">
+                            <td colspan="2" class="bg-secondary text-start res-cart-drop-down overflow-hidden pb-4" style="border-bottom-left-radius: 30px; border-bottom-right-radius: 30px;">
+                                <h6 class="p-3">Roadster Women Brown Black Colourblocked 3/4 Sleeve Pure Cotton T-shirt Pure Cotton T-shirt</h6>
+                                <select class="form-select form-select-sm ms-3 me-2" aria-label=".form-select-sm example" style="width: auto; display: inline-block;">        -->
+                                    <option selected>Size</option>
+                                    <option value="1">XXL</option>
+                                    <option value="2">XL</option>
+                                    <option value="3">Large</option>
+                                    <option value="3">Medium</option>
+                                    <option value="3">Small</option>
+                                </select>
+                                <select class="form-select form-select-sm" aria-label=".form-select-sm example" style="width: auto; display: inline-block;">
+                                    <option selected>Quantity</option>
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="3">4</option>
+                                    <option value="3">5</option>
+                                    <option value="3">6</option>
+                                    <option value="3">7</option>
+                                    <option value="3">8</option>
+                                    <option value="3">9</option>
+                                    <option value="3">10</option>
+                                </select>
+                            </td>
+                        </tr>
+                        <!-- first-row -->
+                        <tr class="tableRow">
+                            <th scope="row">
+                                <div class="row row-cols-2">
+                                    <!-- left-img -->
+                                    <div class="col-auto">
+                                        <img class="img-cover img-thumbnail cart-img" src="https://assets.myntassets.com/fl_progressive/h_960,q_80,w_720/v1/assets/images/6869845/2019/2/25/520e0d80-9089-46e5-8a21-ca8bff67ea841551071293987-Roadster-Women-Grey-Solid-Round-Neck-T-shirt-571551071292359-1.jpg">
+                                    </div>
+                                    <!-- right-text -->
+                                    <div class="col-auto col-md-8 d-flex align-items-center justify-content-start d-md-block">
+                                        <h6 class="d-none d-md-block">Roadster Women Brown Black Colourblocked 3/4 Sleeve Pure Cotton T-shirt Pure Cotton T-shirt</h6>
+                                        <select class="form-select form-select-sm d-none d-md-inline" aria-label=".form-select-sm example" style="width: auto; display: inline-block;">       
+                                            <option selected>Size</option>
+                                            <option value="1">XXL</option>
+                                            <option value="2">XL</option>
+                                            <option value="3">Large</option>
+                                            <option value="3">Medium</option>
+                                            <option value="3">Small</option>
+                                        </select>
+                                        <select class="form-select form-select-sm d-none d-md-inline" aria-label=".form-select-sm example" style="width: auto; display: inline-block;">
+                                            <option selected>Quantity</option>
+                                            <option value="1">1</option>
+                                            <option value="2">2</option>
+                                            <option value="3">3</option>
+                                            <option value="3">4</option>
+                                            <option value="3">5</option>
+                                            <option value="3">6</option>
+                                            <option value="3">7</option>
+                                            <option value="3">8</option>
+                                            <option value="3">9</option>
+                                            <option value="3">10</option>
+                                                </select>
+                                        <br>
+                                        <p class="text-danger d-none d-md-block">Remove</p>
+                                        <button type="button" class="detail_btn btn btn-secondary d-md-none m-2 ms-0 text-nowrap">Detail <i class="bi bi-caret-down"></i></button>
+                                        <button type="button" class="btn btn-danger d-md-none m-2">Remove</button>
+                                    </div>
+                                </div>
+                            </th>
+                            <td class="fw-bold text-success">
+                                $70.00
+                            </td>
+                        </tr>
+                        <tr class="text-light d-none">
+                            <td colspan="2" class="bg-secondary text-start res-cart-drop-down overflow-hidden pb-4" style="border-bottom-left-radius: 30px; border-bottom-right-radius: 30px;">
+                                <h6 class="p-3">Roadster Women Brown Black Colourblocked 3/4 Sleeve Pure Cotton T-shirt Pure Cotton T-shirt</h6>
+                                <select class="form-select form-select-sm ms-3 me-2" aria-label=".form-select-sm example" style="width: auto; display: inline-block;">        -->
+                                    <option selected>Size</option>
+                                    <option value="1">XXL</option>
+                                    <option value="2">XL</option>
+                                    <option value="3">Large</option>
+                                    <option value="3">Medium</option>
+                                    <option value="3">Small</option>
+                                </select>
+                                <select class="form-select form-select-sm" aria-label=".form-select-sm example" style="width: auto; display: inline-block;">
+                                    <option selected>Quantity</option>
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="3">4</option>
+                                    <option value="3">5</option>
+                                    <option value="3">6</option>
+                                    <option value="3">7</option>
+                                    <option value="3">8</option>
+                                    <option value="3">9</option>
+                                    <option value="3">10</option>
+                                </select>
+                            </td>
+                        </tr>
+                        <!-- first-row -->
+                        <tr class="tableRow">
+                            <th scope="row">
+                                <div class="row row-cols-2">
+                                    <!-- left-img -->
+                                    <div class="col-auto">
+                                        <img class="img-cover img-thumbnail cart-img" src="https://assets.myntassets.com/fl_progressive/h_960,q_80,w_720/v1/assets/images/6869845/2019/2/25/520e0d80-9089-46e5-8a21-ca8bff67ea841551071293987-Roadster-Women-Grey-Solid-Round-Neck-T-shirt-571551071292359-1.jpg">
+                                    </div>
+                                    <!-- right-text -->
+                                    <div class="col-auto col-md-8 d-flex align-items-center justify-content-start d-md-block">
+                                        <h6 class="d-none d-md-block">Roadster Women Brown Black Colourblocked 3/4 Sleeve Pure Cotton T-shirt Pure Cotton T-shirt</h6>
+                                        <select class="form-select form-select-sm d-none d-md-inline" aria-label=".form-select-sm example" style="width: auto; display: inline-block;">       
+                                            <option selected>Size</option>
+                                            <option value="1">XXL</option>
+                                            <option value="2">XL</option>
+                                            <option value="3">Large</option>
+                                            <option value="3">Medium</option>
+                                            <option value="3">Small</option>
+                                        </select>
+                                        <select class="form-select form-select-sm d-none d-md-inline" aria-label=".form-select-sm example" style="width: auto; display: inline-block;">
+                                            <option selected>Quantity</option>
+                                            <option value="1">1</option>
+                                            <option value="2">2</option>
+                                            <option value="3">3</option>
+                                            <option value="3">4</option>
+                                            <option value="3">5</option>
+                                            <option value="3">6</option>
+                                            <option value="3">7</option>
+                                            <option value="3">8</option>
+                                            <option value="3">9</option>
+                                            <option value="3">10</option>
+                                                </select>
+                                        <br>
+                                        <p class="text-danger d-none d-md-block">Remove</p>
+                                        <button type="button" class="detail_btn btn btn-secondary d-md-none m-2 ms-0 text-nowrap">Detail <i class="bi bi-caret-down"></i></button>
+                                        <button type="button" class="btn btn-danger d-md-none m-2">Remove</button>
+                                    </div>
+                                </div>
+                            </th>
+                            <td class="fw-bold text-success">
+                                $70.00
+                            </td>
+                        </tr>
+                        <tr class="text-light d-none">
+                            <td colspan="2" class="bg-secondary text-start res-cart-drop-down overflow-hidden pb-4" style="border-bottom-left-radius: 30px; border-bottom-right-radius: 30px;">
+                                <h6 class="p-3">Roadster Women Brown Black Colourblocked 3/4 Sleeve Pure Cotton T-shirt Pure Cotton T-shirt</h6>
+                                <select class="form-select form-select-sm ms-3 me-2" aria-label=".form-select-sm example" style="width: auto; display: inline-block;">        -->
+                                    <option selected>Size</option>
+                                    <option value="1">XXL</option>
+                                    <option value="2">XL</option>
+                                    <option value="3">Large</option>
+                                    <option value="3">Medium</option>
+                                    <option value="3">Small</option>
+                                </select>
+                                <select class="form-select form-select-sm" aria-label=".form-select-sm example" style="width: auto; display: inline-block;">
+                                    <option selected>Quantity</option>
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="3">4</option>
+                                    <option value="3">5</option>
+                                    <option value="3">6</option>
+                                    <option value="3">7</option>
+                                    <option value="3">8</option>
+                                    <option value="3">9</option>
+                                    <option value="3">10</option>
+                                </select>
+                            </td>
+                        </tr>
+                        <!-- first-row -->
+                        <tr class="tableRow">
+                            <th scope="row">
+                                <div class="row row-cols-2">
+                                    <!-- left-img -->
+                                    <div class="col-auto">
+                                        <img class="img-cover img-thumbnail cart-img" src="https://assets.myntassets.com/fl_progressive/h_960,q_80,w_720/v1/assets/images/6869845/2019/2/25/520e0d80-9089-46e5-8a21-ca8bff67ea841551071293987-Roadster-Women-Grey-Solid-Round-Neck-T-shirt-571551071292359-1.jpg">
+                                    </div>
+                                    <!-- right-text -->
+                                    <div class="col-auto col-md-8 d-flex align-items-center justify-content-start d-md-block">
+                                        <h6 class="d-none d-md-block">Roadster Women Brown Black Colourblocked 3/4 Sleeve Pure Cotton T-shirt Pure Cotton T-shirt</h6>
+                                        <select class="form-select form-select-sm d-none d-md-inline" aria-label=".form-select-sm example" style="width: auto; display: inline-block;">       
+                                            <option selected>Size</option>
+                                            <option value="1">XXL</option>
+                                            <option value="2">XL</option>
+                                            <option value="3">Large</option>
+                                            <option value="3">Medium</option>
+                                            <option value="3">Small</option>
+                                        </select>
+                                        <select class="form-select form-select-sm d-none d-md-inline" aria-label=".form-select-sm example" style="width: auto; display: inline-block;">
+                                            <option selected>Quantity</option>
+                                            <option value="1">1</option>
+                                            <option value="2">2</option>
+                                            <option value="3">3</option>
+                                            <option value="3">4</option>
+                                            <option value="3">5</option>
+                                            <option value="3">6</option>
+                                            <option value="3">7</option>
+                                            <option value="3">8</option>
+                                            <option value="3">9</option>
+                                            <option value="3">10</option>
+                                                </select>
+                                        <br>
+                                        <p class="text-danger d-none d-md-block">Remove</p>
+                                        <button type="button" class="detail_btn btn btn-secondary d-md-none m-2 ms-0 text-nowrap">Detail <i class="bi bi-caret-down"></i></button>
+                                        <button type="button" class="btn btn-danger d-md-none m-2">Remove</button>
+                                    </div>
+                                </div>
+                            </th>
+                            <td class="fw-bold text-success">
+                                $70.00
+                            </td>
+                        </tr>
+                        <tr class="text-light d-none">
+                            <td colspan="2" class="bg-secondary text-start res-cart-drop-down overflow-hidden pb-4" style="border-bottom-left-radius: 30px; border-bottom-right-radius: 30px;">
+                                <h6 class="p-3">Roadster Women Brown Black Colourblocked 3/4 Sleeve Pure Cotton T-shirt Pure Cotton T-shirt</h6>
+                                <select class="form-select form-select-sm ms-3 me-2" aria-label=".form-select-sm example" style="width: auto; display: inline-block;">        -->
+                                    <option selected>Size</option>
+                                    <option value="1">XXL</option>
+                                    <option value="2">XL</option>
+                                    <option value="3">Large</option>
+                                    <option value="3">Medium</option>
+                                    <option value="3">Small</option>
+                                </select>
+                                <select class="form-select form-select-sm" aria-label=".form-select-sm example" style="width: auto; display: inline-block;">
+                                    <option selected>Quantity</option>
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="3">4</option>
+                                    <option value="3">5</option>
+                                    <option value="3">6</option>
+                                    <option value="3">7</option>
+                                    <option value="3">8</option>
+                                    <option value="3">9</option>
+                                    <option value="3">10</option>
+                                </select>
+                            </td>
+                        </tr>
+                        <!-- first-row -->
+                        <tr class="tableRow">
+                            <th scope="row">
+                                <div class="row row-cols-2">
+                                    <!-- left-img -->
+                                    <div class="col-auto">
+                                        <img class="img-cover img-thumbnail cart-img" src="https://assets.myntassets.com/fl_progressive/h_960,q_80,w_720/v1/assets/images/6869845/2019/2/25/520e0d80-9089-46e5-8a21-ca8bff67ea841551071293987-Roadster-Women-Grey-Solid-Round-Neck-T-shirt-571551071292359-1.jpg">
+                                    </div>
+                                    <!-- right-text -->
+                                    <div class="col-auto col-md-8 d-flex align-items-center justify-content-start d-md-block">
+                                        <h6 class="d-none d-md-block">Roadster Women Brown Black Colourblocked 3/4 Sleeve Pure Cotton T-shirt Pure Cotton T-shirt</h6>
+                                        <select class="form-select form-select-sm d-none d-md-inline" aria-label=".form-select-sm example" style="width: auto; display: inline-block;">       
+                                            <option selected>Size</option>
+                                            <option value="1">XXL</option>
+                                            <option value="2">XL</option>
+                                            <option value="3">Large</option>
+                                            <option value="3">Medium</option>
+                                            <option value="3">Small</option>
+                                        </select>
+                                        <select class="form-select form-select-sm d-none d-md-inline" aria-label=".form-select-sm example" style="width: auto; display: inline-block;">
+                                            <option selected>Quantity</option>
+                                            <option value="1">1</option>
+                                            <option value="2">2</option>
+                                            <option value="3">3</option>
+                                            <option value="3">4</option>
+                                            <option value="3">5</option>
+                                            <option value="3">6</option>
+                                            <option value="3">7</option>
+                                            <option value="3">8</option>
+                                            <option value="3">9</option>
+                                            <option value="3">10</option>
+                                                </select>
+                                        <br>
+                                        <p class="text-danger d-none d-md-block">Remove</p>
+                                        <button type="button" class="detail_btn btn btn-secondary d-md-none m-2 ms-0 text-nowrap">Detail <i class="bi bi-caret-down"></i></button>
+                                        <button type="button" class="btn btn-danger d-md-none m-2">Remove</button>
+                                    </div>
+                                </div>
+                            </th>
+                            <td class="fw-bold text-success">
+                                $70.00
+                            </td>
+                        </tr>
+                        <tr class="text-light d-none">
+                            <td colspan="2" class="bg-secondary text-start res-cart-drop-down overflow-hidden pb-4" style="border-bottom-left-radius: 30px; border-bottom-right-radius: 30px;">
+                                <h6 class="p-3">Roadster Women Brown Black Colourblocked 3/4 Sleeve Pure Cotton T-shirt Pure Cotton T-shirt</h6>
+                                <select class="form-select form-select-sm ms-3 me-2" aria-label=".form-select-sm example" style="width: auto; display: inline-block;">        -->
+                                    <option selected>Size</option>
+                                    <option value="1">XXL</option>
+                                    <option value="2">XL</option>
+                                    <option value="3">Large</option>
+                                    <option value="3">Medium</option>
+                                    <option value="3">Small</option>
+                                </select>
+                                <select class="form-select form-select-sm" aria-label=".form-select-sm example" style="width: auto; display: inline-block;">
+                                    <option selected>Quantity</option>
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="3">4</option>
+                                    <option value="3">5</option>
+                                    <option value="3">6</option>
+                                    <option value="3">7</option>
+                                    <option value="3">8</option>
+                                    <option value="3">9</option>
+                                    <option value="3">10</option>
+                                </select>
+                            </td>
+                        </tr>
+                        <!-- first-row -->
+                        <tr class="tableRow">
+                            <th scope="row">
+                                <div class="row row-cols-2">
+                                    <!-- left-img -->
+                                    <div class="col-auto">
+                                        <img class="img-cover img-thumbnail cart-img" src="https://assets.myntassets.com/fl_progressive/h_960,q_80,w_720/v1/assets/images/6869845/2019/2/25/520e0d80-9089-46e5-8a21-ca8bff67ea841551071293987-Roadster-Women-Grey-Solid-Round-Neck-T-shirt-571551071292359-1.jpg">
+                                    </div>
+                                    <!-- right-text -->
+                                    <div class="col-auto col-md-8 d-flex align-items-center justify-content-start d-md-block">
+                                        <h6 class="d-none d-md-block">Roadster Women Brown Black Colourblocked 3/4 Sleeve Pure Cotton T-shirt Pure Cotton T-shirt</h6>
+                                        <select class="form-select form-select-sm d-none d-md-inline" aria-label=".form-select-sm example" style="width: auto; display: inline-block;">       
+                                            <option selected>Size</option>
+                                            <option value="1">XXL</option>
+                                            <option value="2">XL</option>
+                                            <option value="3">Large</option>
+                                            <option value="3">Medium</option>
+                                            <option value="3">Small</option>
+                                        </select>
+                                        <select class="form-select form-select-sm d-none d-md-inline" aria-label=".form-select-sm example" style="width: auto; display: inline-block;">
+                                            <option selected>Quantity</option>
+                                            <option value="1">1</option>
+                                            <option value="2">2</option>
+                                            <option value="3">3</option>
+                                            <option value="3">4</option>
+                                            <option value="3">5</option>
+                                            <option value="3">6</option>
+                                            <option value="3">7</option>
+                                            <option value="3">8</option>
+                                            <option value="3">9</option>
+                                            <option value="3">10</option>
+                                                </select>
+                                        <br>
+                                        <p class="text-danger d-none d-md-block">Remove</p>
+                                        <button type="button" class="detail_btn btn btn-secondary d-md-none m-2 ms-0 text-nowrap">Detail <i class="bi bi-caret-down"></i></button>
+                                        <button type="button" class="btn btn-danger d-md-none m-2">Remove</button>
+                                    </div>
+                                </div>
+                            </th>
+                            <td class="fw-bold text-success">
+                                $70.00
+                            </td>
+                        </tr>
+                        <tr class="text-light d-none">
+                            <td colspan="2" class="bg-secondary text-start res-cart-drop-down overflow-hidden pb-4" style="border-bottom-left-radius: 30px; border-bottom-right-radius: 30px;">
+                                <h6 class="p-3">Roadster Women Brown Black Colourblocked 3/4 Sleeve Pure Cotton T-shirt Pure Cotton T-shirt</h6>
+                                <select class="form-select form-select-sm ms-3 me-2" aria-label=".form-select-sm example" style="width: auto; display: inline-block;">        -->
+                                    <option selected>Size</option>
+                                    <option value="1">XXL</option>
+                                    <option value="2">XL</option>
+                                    <option value="3">Large</option>
+                                    <option value="3">Medium</option>
+                                    <option value="3">Small</option>
+                                </select>
+                                <select class="form-select form-select-sm" aria-label=".form-select-sm example" style="width: auto; display: inline-block;">
+                                    <option selected>Quantity</option>
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="3">4</option>
+                                    <option value="3">5</option>
+                                    <option value="3">6</option>
+                                    <option value="3">7</option>
+                                    <option value="3">8</option>
+                                    <option value="3">9</option>
+                                    <option value="3">10</option>
+                                </select>
+                            </td>
+                        </tr>
+                        <!-- first-row -->
+                        <tr class="tableRow">
+                            <th scope="row">
+                                <div class="row row-cols-2">
+                                    <!-- left-img -->
+                                    <div class="col-auto">
+                                        <img class="img-cover img-thumbnail cart-img" src="https://assets.myntassets.com/fl_progressive/h_960,q_80,w_720/v1/assets/images/6869845/2019/2/25/520e0d80-9089-46e5-8a21-ca8bff67ea841551071293987-Roadster-Women-Grey-Solid-Round-Neck-T-shirt-571551071292359-1.jpg">
+                                    </div>
+                                    <!-- right-text -->
+                                    <div class="col-auto col-md-8 d-flex align-items-center justify-content-start d-md-block">
+                                        <h6 class="d-none d-md-block">Roadster Women Brown Black Colourblocked 3/4 Sleeve Pure Cotton T-shirt Pure Cotton T-shirt</h6>
+                                        <select class="form-select form-select-sm d-none d-md-inline" aria-label=".form-select-sm example" style="width: auto; display: inline-block;">       
+                                            <option selected>Size</option>
+                                            <option value="1">XXL</option>
+                                            <option value="2">XL</option>
+                                            <option value="3">Large</option>
+                                            <option value="3">Medium</option>
+                                            <option value="3">Small</option>
+                                        </select>
+                                        <select class="form-select form-select-sm d-none d-md-inline" aria-label=".form-select-sm example" style="width: auto; display: inline-block;">
+                                            <option selected>Quantity</option>
+                                            <option value="1">1</option>
+                                            <option value="2">2</option>
+                                            <option value="3">3</option>
+                                            <option value="3">4</option>
+                                            <option value="3">5</option>
+                                            <option value="3">6</option>
+                                            <option value="3">7</option>
+                                            <option value="3">8</option>
+                                            <option value="3">9</option>
+                                            <option value="3">10</option>
+                                                </select>
+                                        <br>
+                                        <p class="text-danger d-none d-md-block">Remove</p>
+                                        <button type="button" class="detail_btn btn btn-secondary d-md-none m-2 ms-0 text-nowrap">Detail <i class="bi bi-caret-down"></i></button>
+                                        <button type="button" class="btn btn-danger d-md-none m-2">Remove</button>
+                                    </div>
+                                </div>
+                            </th>
+                            <td class="fw-bold text-success">
+                                $70.00
+                            </td>
+                        </tr>
+                        <tr class="text-light d-none">
+                            <td colspan="2" class="bg-secondary text-start res-cart-drop-down overflow-hidden pb-4" style="border-bottom-left-radius: 30px; border-bottom-right-radius: 30px;">
+                                <h6 class="p-3">Roadster Women Brown Black Colourblocked 3/4 Sleeve Pure Cotton T-shirt Pure Cotton T-shirt</h6>
+                                <select class="form-select form-select-sm ms-3 me-2" aria-label=".form-select-sm example" style="width: auto; display: inline-block;">        -->
+                                    <option selected>Size</option>
+                                    <option value="1">XXL</option>
+                                    <option value="2">XL</option>
+                                    <option value="3">Large</option>
+                                    <option value="3">Medium</option>
+                                    <option value="3">Small</option>
+                                </select>
+                                <select class="form-select form-select-sm" aria-label=".form-select-sm example" style="width: auto; display: inline-block;">
+                                    <option selected>Quantity</option>
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="3">4</option>
+                                    <option value="3">5</option>
+                                    <option value="3">6</option>
+                                    <option value="3">7</option>
+                                    <option value="3">8</option>
+                                    <option value="3">9</option>
+                                    <option value="3">10</option>
+                                </select>
+                            </td>
+                        </tr>
+                    </tbody>
+                    <tfoot class="bg-danger text-white">
+                        <tr>
+                            <th>Total</th>
+                            <th>$3200.00</th>
+                        </tr>
+                    </tfoot>
+                </table>
+            </div>
+        </div>
+    </div>
+    <!-- footer section -->
+    <div class="container-xxl">
+        <div class="row bg-dark justify-content-center text-white align-items-start pb-5" style=" margin-top: 5rem;">
+            <div class="col-10 col-sm-8 col-md-7 col-lg-4 mt-5">
+                <div class="row justify-content-center justify-content-lg-start ps-3">
+                    <!-- first-heading  -->
+                    <div class="col-12 text-center text-lg-start">
+                        <h3 class="normal_font">Download Our App</h3>
+                        <p class="display-6 fs-6 mb-0 mb-lg-4">Download App for Android and IOS mobile <br class="d-none d-md-inline"> phone.</p>
+                    </div>
+                    <div class="w-100 d-none d-md-block"></div>
+                    <div class="col-auto">
+                        <span class="store-box ">
+                            <i class="bi fs-2 bi-play-fill"></i>
+                            <p class="h6 m-0">Play Store</p>
+                        </span>
+                    </div>
+                    <div class="col-auto">
+                        <span class="store-box">
+                            <i class="bi fs-4 bi-apple"></i>
+                            <p class="h6 m-0">App Store</p>
+                        </span>
+                    </div>
+                </div>
+            </div>
+            <div class="w-100 d-lg-none"></div>
+            <!-- brand logo -->
+            <div class="col-10 col-sm-6 col-md-5 col-lg-4 mt-5">
+                <div class="row m-0 justify-content-center">
+                    <div class="col-auto">
+                        <span class="border border-white border-4 border-bottom-0 p-2 fs-6 pt-0 position-relative">
+                            <span class="text-danger logo-font">RED</span><span class="text-white">STORE</span>
+                        <span class="logo-small-text logo-cursive-font">The one of the Best Store</span>
+                        <span class="gradien-bottom-border logo-footer-color"></span>
+                        </span>
+                    </div>
+                    <div class="w-100"></div>
+                    <div class="col-auto text-center mt-3">
+                        <p class="display-6 fs-6">Our Purpose is To Sustainably Make the Pleaser and Benefits of Sports <br> Accessible to the Many.</p>
+                    </div>
+                    <div class="w-100"></div>
+                    <div class="col-auto">
+                        <i class="bi bi-instagram fs-3 m-2"></i>
+                        <i class="bi bi-facebook fs-3 m-2"></i>
+                        <i class="bi bi-youtube fs-3 m-2"></i>
+                        <i class="bi bi-whatsapp fs-3 m-2"></i>
+                        <i class="bi bi-linkedin fs-3 m-2"></i>
+                    </div>
+                </div>
+            </div>
+            <!-- Force next column to break to new line at md breakpoint and up -->
+            <div class="w-100 d-lg-none"></div>
+            <!-- usefull links -->
+            <div class="col-12 col-lg-2 text-center mt-5">
+                <p class="h3">Useful Links</p>
+                <h6 class="display-6 fs-6">Coupons</h6>
+                <h6 class="display-6 fs-6">Blog Post</h6>
+                <h6 class="display-6 fs-6">Return Policy</h6>
+                <h6 class="display-6 fs-6">Join Affiliate</h6>
+            </div>
+            <div class="w-100 d-lg-none"></div>
+            <!-- follow us links -->
+            <div class="col-12 col-lg-2 text-center mt-5">
+                <p class="h3">Follow Us</p>
+                <h6 class="display-6 fs-6">Facebook</h6>
+                <h6 class="display-6 fs-6">Twitter</h6>
+                <h6 class="display-6 fs-6">Instagam</h6>
+                <h6 class="display-6 fs-6">Youtube</h6>
+            </div>
+            <div class="w-100"></div>
+            <div class="col-10 text-white text-center mt-5">
+                <hr class="mb-0" style="opacity: .3;">
+                <small>Copyright &copy;2022-All Right Reserve</small>
+            </div>
+        </div>
+    </div>
+    <script>
+        let store = document.getElementById("price");
+        console.log(store);
+    </script>
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <!-- Customize JS -->
+    <script src="JS/script.js"></script>
+</body>
+
+</html>
